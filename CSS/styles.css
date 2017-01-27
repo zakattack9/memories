@@ -1,0 +1,28 @@
+.card {
+  height: 300px;
+  width: 220px;
+}
+
+.front, .back{
+  backface-visibility: hidden;
+  transition: transform 0.5s;
+}
+
+.back{
+ height: 300px;
+ width: 220px;
+}
+
+.front {
+  height: 150px;
+  width: 150px;
+  transform: rotateY(-180deg);
+}
+
+.card:hover .back{
+  transform: rotateY(-180deg);
+}
+
+.card:hover .front{
+  transform: rotateY(0deg);
+}
