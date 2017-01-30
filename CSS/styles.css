@@ -1,28 +1,159 @@
-.card {
+body{
+  /* background-color: paleturquoise; */
+}
+
+#header{
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: white;
+  width: 100%;
+  height: 100px;
+  color: gray;
+  padding-top: 15px;
+  line-height: 5px;
+  opacity: 0;
+}
+
+#tracker{
+  float: left;
+  margin-left: 100px;
+}
+
+#time{
+  float: right;
+  margin-right: 100px;
+}
+
+h1{
+  text-align: center;
+}
+
+.card{
   height: 300px;
   width: 220px;
+  position: relative;
 }
 
 .front, .back{
   backface-visibility: hidden;
   transition: transform 0.5s;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .back{
- height: 300px;
- width: 220px;
-}
-
-.front {
   height: 150px;
   width: 150px;
-  transform: rotateY(-180deg);
+  border-radius: 50%;
+  position: absolute;
+  top: 70px;
+  left: 35px;
 }
 
-.card:hover .back{
+.front{
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
   transform: rotateY(-180deg);
+  position: absolute;
+  top: 70px;
+  left: 35px;
+  background-color: palegreen;
 }
 
-.card:hover .front{
-  transform: rotateY(0deg);
+#startScreen{
+  font-family: 'Josefin Sans', sans-serif;
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: fixed;
+  left: 25%;
+  top: 25%;
+  z-index: 2;
+
+  /* 
+  USE SHORTHAND ABOVE
+  animation-name: fadeOut;
+  animation-duration: 1s;
+  animation-play-state: paused;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear; 
+  */
 }
+
+#blurry{
+  width: 50%;
+  height: 50%;
+  background-color: gray;
+  border-radius: 10%;
+  filter: blur(1px);
+  opacity: 0.8;
+  position: fixed;
+  z-index: 3;
+}
+
+#infoScreen{
+  width: 40%;
+  height: 40%;
+  padding: 15px;
+  color: white;
+  text-align: center;
+  position: fixed;
+  left: 28%;
+  top: 27%;
+  z-index: 4;
+}
+
+#start{
+  width: 100px;
+  height: 50px;
+  background-color: paleturquoise;
+  line-height: 15px;
+  border-radius: 20%;
+  border: 2px aqua solid;
+  position: fixed;
+  left: 44.5%;
+  transition: 0.2s;
+}
+
+#start:hover{
+  transform: scale(1.2, 1.2);
+  transition: 0.2s;
+  color: yellow;
+  background-color: #c0f2f2;
+}
+
+#wrapper{
+  margin-right: 8px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  /* justify-content: space-around; */
+  align-content: center;
+  /* align-content: space-around; */
+  z-index: 1;
+  position: fixed;
+  
+  /* blurs screen */
+  background-color: white;
+  opacity: 0.5;
+  filter: blur(1px);
+}
+
+#one, #two{
+  animation: cardFade 1s linear 0.5s forwards paused;
+}
+
+#three, #four{
+  animation: cardFade 1s linear 0.5s forwards paused;
+}
+
+#five, #six{
+  animation: cardFade 1s linear 0.5s forwards paused;
+}
+
+#seven, #eight{
+  animation: cardFade 1s linear 0.5s forwards paused;
+}
+

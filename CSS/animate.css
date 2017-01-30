@@ -1,0 +1,79 @@
+@keyframes cardFade{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    display: none;
+  }
+}
+
+#header{
+  animation: title 1s linear 1.8s forwards paused;
+  /* 1.5s is the delay time */
+}
+
+@keyframes title{
+  0%{
+    opacity: 0;
+    background-color: white;
+    filter: blur(0.5px);
+    color: gray;
+  }
+  50%{
+    opacity: 0.5;
+    background-color: yellow;
+    filter: blur(0.5px);
+    color: gray;
+  }
+  100%{
+    opacity: 1;
+    background-color: #FDD847;
+    filter: blur(0px);
+    color: white;
+  }
+}
+
+#startScreen{
+  animation: fadeOut 1s linear forwards paused;
+}
+
+@keyframes fadeOut{
+  0%{
+    opacity: 1;
+  }
+  25%{
+    opacity: 0.75;
+  }
+  50%{
+    opacity: 0.5;
+  }
+  75%{
+    opacity: 0.25;
+  }
+  100%{
+    display: none;
+    opacity: 0;
+  }
+}
+
+#wrapper{
+  animation: unBlur 0.5s linear 1.5s forwards paused;
+}
+
+@keyframes unBlur{
+  0%{
+    opacity: 0.5;
+    background-color: white;
+    filter: blur(1px);
+  }
+  50%{
+    opacity: 0.75;
+    background-color: paleturquoise;
+    filter: blur(0.5px);
+  }
+  100%{
+    opacity: 1;
+    background-color: paleturquoise;
+    filter: blur(0px);
+}

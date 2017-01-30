@@ -5,41 +5,57 @@
   <title>Match Maker</title>
   <link rel="stylesheet" type="text/css" href="./CSS/styles.css">
   <link rel="stylesheet" type="text/css" href="./CSS/animate.css">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300i,400" rel="stylesheet">
 </head>
 <body>
-  <h1>Test Your Memory!</h1>
+  <div id="header">
+    <h1>Crack Matchin'</h1>
+    <div id="tracker"><h2 id="points">Points: 0</h2></div>
+    <div id="time"><h2 id="countdown">Time Left: </h2></div>
+  </div>
+  <div id="startScreen">
+      <div id="blurry"></div>
+      <div id="infoScreen">
+        <h1 style="color:yellow";>Crack Matchin'</h1>
+        <h2><i>Test your memory and matchmaking skills with this game! Flip the cards to find a pair, every pair is worth one point! Finish in 30 seconds or less.</i>
+        <hr/>
+        Created By: Zak S.
+        </h2>
+        <div id="start" onclick="cardShuffle(); gameStart();"><h2>START!</h2></div>
+      </div>
+  </div>
   <div id="wrapper">
-    <div class="card one">
-      <img src="./assets/One.png" class="front">
-      <img src="./assets/cardBack.png" class="back">
+    <div class="card" id="one">
+      <img src="./assets/One.png" class="front" id="a">
+      <img src="./assets/cardBack.png" class="back" id="b" onclick="cardCheck(1)">
     </div>
-    <div class="card one">
-      <img src="./assets/One.png" class="front">
-      <img src="./assets/cardBack.png" class="back">
+    <div class="card" id="two">
+      <img src="./assets/One.png" class="front" id="c">
+      <img src="./assets/cardBack.png" class="back" id="d" onclick="cardCheck(2)">
     </div>
-    <div class="card two">
-      <img src="./assets/Two.png" class="front">
-      <img src="./assets/cardBack.png" class="back">
+    <div class="card" id="three">
+      <img src="./assets/Two.png" class="front" id="e">
+      <img src="./assets/cardBack.png" class="back" id="f" onclick="cardCheck(3)">
     </div>
-    <div class="card two">
-      <img src="./assets/Two.png" class="front">
-      <img src="./assets/cardBack.png" class="back">
+    <div class="card" id="four">
+      <img src="./assets/Two.png" class="front" id="g">
+      <img src="./assets/cardBack.png" class="back" id="h" onclick="cardCheck(4)">
     </div>
-    <div class="card three">
-      <img src="./assets/Three.jpg" class="front">
-      <img src="./assets/cardBack.png" class="back">
+    <div class="card" id="five">
+      <img src="./assets/Three.jpg" class="front" id="i">
+      <img src="./assets/cardBack.png" class="back" id="j" onclick="cardCheck(5)">
     </div>
-    <div class="card three">
-      <img src="./assets/Three.jpg" class="front">
-      <img src="./assets/cardBack.png" class="back">
+    <div class="card" id="six">
+      <img src="./assets/Three.jpg" class="front" id="k">
+      <img src="./assets/cardBack.png" class="back" id="l" onclick="cardCheck(6)">
     </div>
-    <div class="card four">
-      <img src="./assets/Four.png" class="front">
-      <img src="./assets/cardBack.png" class="back">
+    <div class="card" id="seven">
+      <img src="./assets/Four.png" class="front" id="m">
+      <img src="./assets/cardBack.png" class="back" id="n" onclick="cardCheck(7)">
     </div>
-    <div class="card four">
-      <img src="./assets/Four.png" class="front">
-      <img src="./assets/cardBack.png" class="back">
+    <div class="card" id="eight">
+      <img src="./assets/Four.png" class="front" id="o">
+      <img src="./assets/cardBack.png" class="back" id="p" onclick="cardCheck(8)">
     </div>
   </div>
 <script type="text/javascript" src="./JS/app.js"></script>
