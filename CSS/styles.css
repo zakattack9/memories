@@ -71,7 +71,6 @@ h1{
   left: 25%;
   top: 25%;
   z-index: 2;
-
   /* 
   USE SHORTHAND ABOVE
   animation-name: fadeOut;
@@ -101,7 +100,7 @@ h1{
   text-align: center;
   position: fixed;
   left: 28%;
-  top: 27%;
+  top: 25.5%;
   z-index: 4;
 }
 
@@ -122,6 +121,74 @@ h1{
   transition: 0.2s;
   color: yellow;
   background-color: #c0f2f2;
+}
+
+#winner{
+  width: 700px;
+  height: 700px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 20px;
+  display: none;
+  opacity: 0;
+  /*animation: winner 1s linear 4.5s forwards paused; */
+}
+
+#winnerPic{
+  position: relative;
+  left: 25%;
+}
+
+#winnerMessage{
+/* credit to code below goes to, https://gist.github.com/ratbeard/9076500 */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: -webkit-gradient(linear,  left top,  right top, 
+    color-stop(0.00, red), 
+    color-stop(16%, orange),
+    color-stop(32%, yellow),
+    color-stop(48%, green),
+    color-stop(60%, blue),
+    color-stop(76%, indigo),
+    color-stop(1.00, violet));
+}
+
+#loser{
+  width: 700px;
+  height: 700px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 30px;
+  display: none;
+}
+
+#loserPic{
+  position: relative;
+  right: 7%;
+}
+
+#loserMessage{
+  font-family: 'Indie Flower', cursive;
+}
+
+#playAgain{
+  font-family: 'Bahiana', cursive;
+  height: 70px;
+  width: 200px;
+  position: relative;
+  left: 35%;
+  background-color: crimson;
+  border-radius: 30%;
+  border: 5px firebrick solid;
+  transform: scale(0.5, 0.5);
+  transition: 0.5s;
+}
+
+#playAgain:hover{
+  border: 5px hotpink double;
+  background-color: lightpink;
+  transition: 1s;
+  transform: scale(1, 1) rotate(180deg);
 }
 
 #wrapper{

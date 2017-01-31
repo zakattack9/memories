@@ -1,3 +1,81 @@
+#winner{
+  animation:  winnerFadeIn 2s linear forwards paused;
+}
+
+@keyframes winnerFadeIn{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+#winnerMessage{
+  /* animation LightSpeedIn */
+  animation: winnerMessage 0.7s linear forwards paused;
+}
+
+@keyframes winnerMessage{
+  0%{
+    transform: translate3d(100%, 0, 0) skewX(-30deg);
+    opacity: 0;
+  }
+
+  60%{
+    transform: skewX(20deg);
+    opacity: 1;
+  }
+
+  80%{
+    transform: skewX(-5deg);
+    opacity: 1;
+  }
+
+  100%{
+    transform: none;
+    opacity: 1;
+  }
+}
+
+#fin{
+  animation: fin 0.4s 4s infinite forwards paused;
+}
+
+@keyframes fin{
+  0%{
+    transform: translateY(0);
+  }
+  20%{
+    transform: translateY(-30px);
+  }
+  40%{
+    transform: translateY(-15px);
+  }
+  60%{
+    transform: translateY(0);
+  }
+  80%{
+    transform: translateY(-50px);
+  }
+  100%{
+    transform: translateY(-25px);
+  }
+}
+
+#grow{
+ animation: grow 8s linear 8s forwards paused; 
+}
+
+@keyframes grow{
+  0%{
+    transform: scale(1, 1);
+  }
+  100%{
+    transform: scale(20, 20);
+  }
+}
+
 @keyframes cardFade{
   0%{
     opacity: 1;
@@ -5,6 +83,65 @@
   100%{
     opacity: 0;
     display: none;
+  }
+}
+
+#loser{
+  animation: loser 2s linear forwards paused;
+}
+
+@keyframes loser{
+  0%{
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40%{
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    animation-timing-function: ease-in;
+  }
+
+  60%{
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1;
+  }
+
+  80%{
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+  }
+
+  100%{
+    transform: perspective(400px);
+  }
+}
+
+#hinge{
+  animation: hinge 2s linear forwards paused;
+}
+
+@keyframes hinge{
+  0% {
+    transform-origin: top left;
+    animation-timing-function: linear;
+  }
+
+  20%, 60%{
+    transform: rotate3d(0, 0, 1, 80deg);
+    transform-origin: top left;
+    animation-timing-function: ease-in-out;
+  }
+
+  40%, 80%{
+    transform: rotate3d(0, 0, 1, 60deg);
+    transform-origin: top left;
+    animation-timing-function: ease-in-out;
+    opacity: 1;
+  }
+
+  100%{
+    transform: translate3d(0, 700px, 0);
+    opacity: 0;
   }
 }
 
@@ -36,6 +173,34 @@
 
 #startScreen{
   animation: fadeOut 1s linear forwards paused;
+}
+
+#blurry{
+  animation: fadeInBlurry 1s linear forwards running;
+}
+
+@keyframes fadeInBlurry{
+  0%{
+    opacity: 0;
+    background-color: white;
+  }
+  100%{
+    opacity: 0.8;
+    background-color: gray;
+  }
+}
+
+#infoScreen, #start, #wrapper{
+  animation: fadeIn 1s linear forwards running;
+}
+
+@keyframes fadeIn{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
 }
 
 @keyframes fadeOut{

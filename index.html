@@ -6,23 +6,48 @@
   <link rel="stylesheet" type="text/css" href="./CSS/styles.css">
   <link rel="stylesheet" type="text/css" href="./CSS/animate.css">
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300i,400" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Bahiana|Indie+Flower" rel="stylesheet">
 </head>
 <body>
   <div id="header">
     <h1>Crack Matchin'</h1>
     <div id="tracker"><h2 id="points">Points: 0</h2></div>
-    <div id="time"><h2 id="countdown">Time Left: </h2></div>
+    <div id="time"><h2 id="countdown">Time Left: 30</h2></div>
   </div>
   <div id="startScreen">
       <div id="blurry"></div>
       <div id="infoScreen">
         <h1 style="color:yellow";>Crack Matchin'</h1>
-        <h2><i>Test your memory and matchmaking skills with this game! Flip the cards to find a pair, every pair is worth one point! Finish in 30 seconds or less.</i>
+        <h2><i>Test your memory and matchmaking skills with this game. Flip the cards to find a pair, every pair is worth one point. Be careful, some cards flip back over quickly! Finish in 30 seconds or less.</i>
         <hr/>
         Created By: Zak S.
         </h2>
         <div id="start" onclick="cardShuffle(); gameStart();"><h2>START!</h2></div>
       </div>
+  </div>
+  <div id="winner">
+    <div id="grow">
+      <div id="fin">
+        <div id="winnerPic">
+          <img src="./assets/winner.png"/>
+        </div>
+        <div id="winnerMessage">
+          <h1 id="bye">WeLp, yUh GoT tHiS fAr WiThOuT bReAkInG mY gAmE sO i GuEsS yOu WoN...
+          </h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="loser">
+    <div id="hinge">
+      <img src="./assets/loser.png" id="loserPic"/>
+      <div id="loserMessage">
+        <h1>Lol u must suck at matching...</h1> 
+      </div>
+    </div>
+    <div id="playAgain" onclick="gameOver()">
+      <h1>Click to Play Again</h1>
+    </div>
   </div>
   <div id="wrapper">
     <div class="card" id="one">

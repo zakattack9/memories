@@ -36,6 +36,7 @@ function cardShuffle(){
   eight.style.order = newArray[7];
 }
 
+var time = 30;
 function gameStart(){
 
   var startScreen = document.getElementById("startScreen");
@@ -53,12 +54,18 @@ function gameStart(){
   }, 2000);
 
   //timer
-	var time = 33;
-  setInterval(
-  function seconds(){
-    time--;
-    document.getElementById("countdown").innerText = "Time Left: " + time;
-  }, 1000)
+  //delayed due to animations
+  setTimeout(function(){
+    function seconds(){
+      time--;
+      document.getElementById("countdown").innerText = "Time Left: " + time;
+      if(time == 0){
+        clearInterval(stop);
+      }
+    }
+    //stops timer at 0;
+    var stop = setInterval(function(){ seconds(); }, 1000);
+  }, 3000);
 }
 
 var firstFlip = 0;
@@ -183,10 +190,6 @@ function cardCheck(x){
   	secondFlip = 0; 	
   }
 
-  if(totalPoints == 4){
-  //game winner message or picture config here
-  }
-
   console.log(firstFlip);
   console.log(secondFlip);
   
@@ -210,6 +213,56 @@ function cardCheck(x){
 				}
 	    }
     }, 1500);
+
+  //winner ending animation
+  if(totalPoints == 4){
+    var winner = document.getElementById("winner");
+    setTimeout(function(){
+    winner.style.display = "block";
+    winner.style.animationPlayState = "running";
+    }, 2500);
+
+    var winnerMessage = document.getElementById("winnerMessage");
+    winnerMessage.style.animationPlayState = "running";
+
+    var fin = document.getElementById("fin");
+    fin.style.animationPlayState = "running";
+
+    setTimeout(function(){
+    document.getElementById("bye").innerText = "ByE bYe ;)"
+    }, 9000);
+
+    var grow = document.getElementById("grow");
+    grow.style.animationPlayState = "running";
+
+    setTimeout(function(){
+    //reloads page
+    location.reload();
+    }, 13000);
+  }
+}
+
+//checks amount of points at 0 seconds left
+setInterval(function(){
+    //loser animation
+    //make sure to change totalPoints < ? , the ? should be set to the mac points
+    if(totalPoints < 4 && time == 0){
+      var loser = document.getElementById("loser");
+      setTimeout(function(){
+      loser.style.display = "block";
+      loser.style.animationPlayState = "running";
+      }, 1000);
+    }
+}, 1000);
+
+function gameOver(){
+  var hinge = document.getElementById("hinge");
+  hinge.style.animationPlayState = "running";
+
+  setTimeout(function(){
+  //reloads page
+  location.reload();
+  }, 2500);  
 }
 
 /*
