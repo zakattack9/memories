@@ -58,7 +58,7 @@ h1{
   position: absolute;
   top: 70px;
   left: 35px;
-  background-color: palegreen;
+  background-color: paleturquoise;
 }
 
 #startScreen{
@@ -224,3 +224,18 @@ h1{
   animation: cardFade 1s linear 0.5s forwards paused;
 }
 
+#nine, #ten{
+  animation: cardFade 1s linear 0.5s forwards paused;
+}
+
+#eleven, #twelve{
+  animation: cardFade 1s linear 0.5s forwards paused;
+}
+
+#thirteen, #fourteen{
+  animation: cardFade 1s linear 0.5s forwards paused;
+}
+
+#fifteen, #sixteen{
+  animation: cardFade 1s linear 0.5s forwards paused;
+}

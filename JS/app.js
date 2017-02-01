@@ -8,6 +8,14 @@ var five = document.getElementById("five")
 var six = document.getElementById("six")
 var seven = document.getElementById("seven")
 var eight = document.getElementById("eight")
+var nine = document.getElementById("nine")
+var ten = document.getElementById("ten")
+var eleven = document.getElementById("eleven")
+var twelve = document.getElementById("twelve")
+var thirteen = document.getElementById("thirteen")
+var fourteen = document.getElementById("fourteen")
+var fifteen = document.getElementById("fifteen")
+var sixteen = document.getElementById("sixteen")
 
 var count = 0
 function cardShuffle(){
@@ -34,6 +42,14 @@ function cardShuffle(){
   six.style.order = newArray[5];
   seven.style.order = newArray[6];
   eight.style.order = newArray[7];
+  nine.style.order = newArray[0];
+  ten.style.order = newArray[1];
+  eleven.style.order = newArray[2];
+  twelve.style.order = newArray[3];
+  thirteen.style.order = newArray[4];
+  fourteen.style.order = newArray[5];
+  fifteen.style.order = newArray[6];
+  sixteen.style.order = newArray[7];
 }
 
 var time = 30;
@@ -129,6 +145,62 @@ function cardCheck(x){
   	document.getElementById("o").style.transform = "rotateY(0deg)";
   	document.getElementById("p").style.transform = "rotateY(-180deg)";
   }
+
+  if(x == 9){
+    firstFlip = 5;
+    flipCounter++;
+    document.getElementById("q").style.transform = "rotateY(0deg)";
+    document.getElementById("r").style.transform = "rotateY(-180deg)"; 
+  }
+
+  if(x == 10){
+    secondFlip = 5;
+    flipCounter++;
+    document.getElementById("s").style.transform = "rotateY(0deg)";
+    document.getElementById("t").style.transform = "rotateY(-180deg)";
+  }
+
+  if(x == 11){
+    firstFlip = 6;
+    flipCounter++;
+    document.getElementById("u").style.transform = "rotateY(0deg)";
+    document.getElementById("v").style.transform = "rotateY(-180deg)";
+  }
+
+  if(x == 12){
+    secondFlip = 6;
+    flipCounter++;
+    document.getElementById("w").style.transform = "rotateY(0deg)";
+    document.getElementById("x").style.transform = "rotateY(-180deg)";
+  }
+
+  if(x == 13){
+    firstFlip = 7;
+    flipCounter++;
+    document.getElementById("y").style.transform = "rotateY(0deg)";
+    document.getElementById("z").style.transform = "rotateY(-180deg)";
+  }
+  
+  if(x == 14){
+    secondFlip = 7;
+    flipCounter++;
+    document.getElementById("aa").style.transform = "rotateY(0deg)";
+    document.getElementById("bb").style.transform = "rotateY(-180deg)";
+  }
+  
+  if(x == 15){
+    firstFlip = 8;
+    flipCounter++;
+    document.getElementById("cc").style.transform = "rotateY(0deg)";
+    document.getElementById("dd").style.transform = "rotateY(-180deg)";
+  }
+  
+  if(x == 16){
+    secondFlip = 8;
+    flipCounter++;
+    document.getElementById("ee").style.transform = "rotateY(0deg)";
+    document.getElementById("ff").style.transform = "rotateY(-180deg)";
+  }
   
   if(firstFlip == secondFlip){
   	var points = document.getElementById("points");
@@ -140,11 +212,6 @@ function cardCheck(x){
       var cd = document.getElementById("two");
       cd.style.animationPlayState = "running";
       points.innerText = "Points: " + totalPoints;
-      /*setTimeout(
-  			function noneOne(){
-  				ab.style.display = "none"
-  				cd.style.display = "none"
-        }, 1500)*/
     }
     if(firstFlip == 2){
     	totalPoints++
@@ -153,11 +220,6 @@ function cardCheck(x){
       var gh = document.getElementById("four");
       gh.style.animationPlayState = "running";
       points.innerText = "Points: " + totalPoints;
-      /*setTimeout(
-  			function noneTwo(){
-  				ef.style.display = "none"
-  				gh.style.display = "none"
-        }, 1500)*/
     }
     if(firstFlip == 3){
     	totalPoints++
@@ -166,11 +228,6 @@ function cardCheck(x){
       var kl = document.getElementById("six");
       kl.style.animationPlayState = "running";
       points.innerText = "Points: " + totalPoints;
-      /*setTimeout(
-  			function noneThree(){
-  				ij.style.display = "none"
-  				kl.style.display = "none"
-        }, 1500)*/
     }
     if(firstFlip == 4){
     	totalPoints++
@@ -179,12 +236,40 @@ function cardCheck(x){
       var op = document.getElementById("eight");
       op.style.animationPlayState = "running";
       points.innerText = "Points: " + totalPoints;
-      /*setTimeout(
-  			function noneFour(){
-  				mn.style.display = "none"
-  				op.style.display = "none"
-        }, 1500)*/
     }
+    if(firstFlip == 5){
+      totalPoints++
+      var qr = document.getElementById("nine");
+      qr.style.animationPlayState = "running";
+      var st = document.getElementById("ten");
+      st.style.animationPlayState = "running";
+      points.innerText = "Points: " + totalPoints;
+    }
+    if(firstFlip == 6){
+      totalPoints++
+      var uv = document.getElementById("eleven");
+      uv.style.animationPlayState = "running";
+      var wx = document.getElementById("twelve");
+      wx.style.animationPlayState = "running";
+      points.innerText = "Points: " + totalPoints;
+    }
+    if(firstFlip == 7){
+      totalPoints++
+      var yz = document.getElementById("thirteen");
+      yz.style.animationPlayState = "running";
+      var aabb = document.getElementById("fourteen");
+      aabb.style.animationPlayState = "running";
+      points.innerText = "Points: " + totalPoints;
+    }
+    if(firstFlip == 8){
+      totalPoints++
+      var ccdd = document.getElementById("fifteen");
+      ccdd.style.animationPlayState = "running";
+      var eeff = document.getElementById("sixteen");
+      eeff.style.animationPlayState = "running";
+      points.innerText = "Points: " + totalPoints;
+    }
+
   	flipCounter = 0;
   	firstFlip = 0;
   	secondFlip = 0; 	
@@ -202,8 +287,8 @@ function cardCheck(x){
 		    firstFlip = 0;
 		  	secondFlip = 0;
         
-		  	var idFrontNames = ["a", "c", "e", "g", "i", "k", "m", "o"];
-  			var idBackNames = ["b", "d", "f", "h", "j", "l", "n", "p"];
+		  	var idFrontNames = ["a", "c", "e", "g", "i", "k", "m", "o", "q", "s", "u", "w", "y", "aa", "cc", "ee"];
+  			var idBackNames = ["b", "d", "f", "h", "j", "l", "n", "p", "r", "t", "v", "x", "z", "bb", "dd", "ff"];
 				for(var z = idFrontNames.length; z > 0; z--){
 					frontId = idFrontNames.splice(0, 1)[0];
 					backId = idBackNames.splice(0, 1)[0];
@@ -215,7 +300,7 @@ function cardCheck(x){
     }, 1500);
 
   //winner ending animation
-  if(totalPoints == 4){
+  if(totalPoints == 8){
     var winner = document.getElementById("winner");
     setTimeout(function(){
     winner.style.display = "block";
@@ -246,7 +331,7 @@ function cardCheck(x){
 setInterval(function(){
     //loser animation
     //make sure to change totalPoints < ? , the ? should be set to the mac points
-    if(totalPoints < 4 && time == 0){
+    if(totalPoints < 8 && time == 0){
       var loser = document.getElementById("loser");
       setTimeout(function(){
       loser.style.display = "block";
