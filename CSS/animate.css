@@ -173,6 +173,15 @@
 
 #startScreen{
   animation: fadeOut 1s linear forwards paused;
+
+  /* 
+  USE SHORTHAND ABOVE
+  animation-name: fadeOut;
+  animation-duration: 1s;
+  animation-play-state: paused;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear; 
+  */
 }
 
 #blurry{

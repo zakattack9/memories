@@ -42,10 +42,10 @@ function cardShuffle(){
   six.style.order = newArray[5];
   seven.style.order = newArray[6];
   eight.style.order = newArray[7];
-  nine.style.order = newArray[0];
-  ten.style.order = newArray[1];
-  eleven.style.order = newArray[2];
-  twelve.style.order = newArray[3];
+  nine.style.order = newArray[8];
+  ten.style.order = newArray[9];
+  eleven.style.order = newArray[10];
+  twelve.style.order = newArray[11];
   thirteen.style.order = newArray[4];
   fourteen.style.order = newArray[5];
   fifteen.style.order = newArray[6];

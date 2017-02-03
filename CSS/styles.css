@@ -28,9 +28,13 @@ h1{
 }
 
 .card{
-  height: 300px;
-  width: 220px;
+  display: block;
+  height: 210px;
+  width: 210px;
   position: relative;
+  flex-shrink: 0;
+
+  margin-top: -10px;
 }
 
 .front, .back{
@@ -71,19 +75,11 @@ h1{
   left: 25%;
   top: 25%;
   z-index: 2;
-  /* 
-  USE SHORTHAND ABOVE
-  animation-name: fadeOut;
-  animation-duration: 1s;
-  animation-play-state: paused;
-  animation-fill-mode: forwards;
-  animation-timing-function: linear; 
-  */
 }
 
 #blurry{
   width: 50%;
-  height: 50%;
+  height: 45%;
   background-color: gray;
   border-radius: 10%;
   filter: blur(1px);
@@ -140,22 +136,25 @@ h1{
 }
 
 #winnerMessage{
-/* credit to code below goes to, https://gist.github.com/ratbeard/9076500 */
+/* 
+credit to code below goes to, https://gist.github.com/ratbeard/9076500 
+web prefixes must be used to prevent errors
+*/
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-image: -webkit-gradient(linear,  left top,  right top, 
-    color-stop(0.00, red), 
-    color-stop(16%, orange),
-    color-stop(32%, yellow),
-    color-stop(48%, green),
-    color-stop(60%, blue),
-    color-stop(76%, indigo),
-    color-stop(1.00, violet));
+  color-stop(0.00, red), 
+  color-stop(16%, orange),
+  color-stop(32%, yellow),
+  color-stop(48%, green),
+  color-stop(60%, blue),
+  color-stop(76%, indigo),
+  color-stop(1.00, violet));
 }
 
 #loser{
   width: 700px;
-  height: 700px;
+  height: 1000px;
   margin-right: auto;
   margin-left: auto;
   margin-top: 30px;
@@ -192,17 +191,22 @@ h1{
 }
 
 #wrapper{
-  margin-right: 8px;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 50px;
+  height: 100%;
+
   display: flex;
+  margin-right: 8px; /*aligns this div with header */
   flex-flow: row wrap;
   justify-content: center;
   /* justify-content: space-around; */
   align-content: center;
   /* align-content: space-around; */
   z-index: 1;
-  position: fixed;
+  position: absolute;
   
-  /* blurs screen */
+  /* blurs screen temporarily */
   background-color: white;
   opacity: 0.5;
   filter: blur(1px);
