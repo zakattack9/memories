@@ -54,10 +54,13 @@ h1{
   left: 35px;
 }
 
+#a, #c, #e, #g, #i, #k, #m, #o, #q, #s, #u, #w{
+  border-radius: 50%;
+}
+
 .front{
   height: 150px;
   width: 150px;
-  border-radius: 50%;
   transform: rotateY(-180deg);
   position: absolute;
   top: 70px;
@@ -79,7 +82,7 @@ h1{
 
 #blurry{
   width: 50%;
-  height: 45%;
+  height: 50%;
   background-color: gray;
   border-radius: 10%;
   filter: blur(1px);
@@ -193,8 +196,8 @@ web prefixes must be used to prevent errors
 #wrapper{
   padding-left: 10%;
   padding-right: 10%;
-  padding-bottom: 50px;
-  height: 100%;
+  padding-bottom: 60px;
+  height: 120%;
 
   display: flex;
   margin-right: 8px; /*aligns this div with header */

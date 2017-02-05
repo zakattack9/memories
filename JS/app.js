@@ -297,7 +297,7 @@ function cardCheck(x){
 		  	  document.getElementById(backId).style.transform = "rotateY(0deg)";		
 				}
 	    }
-    }, 1500);
+    }, 1400);
 
   //winner ending animation
   if(totalPoints == 8){
@@ -336,6 +336,8 @@ setInterval(function(){
       setTimeout(function(){
       loser.style.display = "block";
       loser.style.animationPlayState = "running";
+
+      document.getElementById("wrapper").style.display = "none"; 
       }, 1000);
     }
 }, 1000);
